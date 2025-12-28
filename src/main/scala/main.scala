@@ -18,4 +18,4 @@ def main(): Unit =
     List(p, q, p ∨ q),
     List(p, q, ~p, ~p ∨ q),
     List(p, q, p ∧ q, ~(p ∧ q), ~p, ~ q, ~p ∨ ~q)
-  ).map(_.printSideBySide)
+  ).map(_.asString).foreach(print)

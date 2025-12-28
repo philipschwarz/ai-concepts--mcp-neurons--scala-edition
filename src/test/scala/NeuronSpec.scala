@@ -51,4 +51,5 @@ class NeuronSpec extends AnyFlatSpec with Matchers {
            |│ 0 │ 1 │ 1 │
            |╰───┴───┴───╯""".stripMargin)
   }
+
 }

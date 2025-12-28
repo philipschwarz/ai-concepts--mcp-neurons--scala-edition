@@ -21,9 +21,9 @@ object SignalSource:
       signalSources.toList.map(_.output)
   
   extension (signalSources: List[SignalSource])
-    def printSideBySide: Unit =
+    def asString: String =
       signalSources
         .map(_.toString.split("\n").toList.tail)
         .transpose
         .map(_.mkString)
-        .foreach(println)
+        .mkString("\n","\n","")
