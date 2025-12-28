@@ -1,3 +1,5 @@
+import io.github.iltotore.iron.autoRefine
+
 trait SignalSource:
   def name: String
   def output: List[Bit]

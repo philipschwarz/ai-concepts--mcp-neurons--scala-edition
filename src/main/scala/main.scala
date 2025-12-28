@@ -1,4 +1,4 @@
-import io.github.iltotore.iron.*
+import io.github.iltotore.iron.autoRefine
 import SignalSource.printSideBySide
 
 @main

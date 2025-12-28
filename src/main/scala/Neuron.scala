@@ -2,8 +2,8 @@ import io.github.iltotore.iron.*
 
 case class Neuron(
   name: String,
-  θ: Int,
-  inhibitors: Int,
+  θ: Threshold,
+  inhibitors: Count,
   inputs: List[List[Bit]]
 ) extends SignalSource:
 
@@ -11,10 +11,10 @@ case class Neuron(
     process(inputs)
 
   private def process(inputs: List[List[Bit]]): List[Bit] =
-    inputs.transpose.map(xs =>
+    inputs.transpose.map { xs =>
       if xs.takeRight(inhibitors).contains(1) then 0
       else f(g(xs))
-    )
+    }
 
   private def g(xs: List[Bit]): Int =
     xs.sum
@@ -42,8 +42,8 @@ object Neuron:
 
   def apply(
     name: String,
-    θ: Int,
-    inhibitors: Int,
+    θ: Threshold,
+    inhibitors: Count,
     signalSources: SignalSource*
   ): Neuron =
     Neuron(name, θ, inhibitors, signalSources.outputs)
