@@ -17,6 +17,6 @@ def main(): Unit =
   List(
     List(p, q, p ∧ q),
     List(p, q, p ∨ q),
-    List(p, ~p, q, ~p ∨ q),
+    List(p, q, ~p, ~p ∨ q),
     List(p, q, p ∧ q, ~(p ∧ q), ~p, ~ q, ~p ∨ ~q)
   ).map(_.printSideBySide)
