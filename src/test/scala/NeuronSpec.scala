@@ -10,7 +10,7 @@ class NeuronSpec extends AnyFlatSpec with Matchers {
     val not_p: Neuron = ~p
 
     assert(
-      not_p.toString
+      not_p.show
       ==
       """|
          |╭───────╮
@@ -36,7 +36,7 @@ class NeuronSpec extends AnyFlatSpec with Matchers {
     val not_p_or_q: Neuron = ~p ∨ q
 
     assert(
-      not_p_or_q.toString
+      not_p_or_q.show
         ==
         """|
            |╭───────────╮

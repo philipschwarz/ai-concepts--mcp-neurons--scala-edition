@@ -3,7 +3,7 @@ import io.github.iltotore.iron.autoRefine
 trait SignalSource:
   def name: String
   def output: List[Bit]
-  def toString: String
+  def show: String
 
   def ∧(that: SignalSource): Neuron =
     Neuron(name = s"${this.name} ∧ ${that.name}", θ = 2, inhibitors = 0, signalSources = this, that)
@@ -21,9 +21,9 @@ object SignalSource:
       signalSources.toList.map(_.output)
   
   extension (signalSources: List[SignalSource])
-    def asString: String =
+    def show: String =
       signalSources
-        .map(_.toString.split("\n").toList.tail)
+        .map(_.show.split("\n").toList.tail)
         .transpose
         .map(_.mkString)
         .mkString("\n","\n","")

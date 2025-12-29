@@ -12,7 +12,7 @@ class SignalSourceSpec extends AnyFlatSpec with Matchers {
     val sources = List(p, q, ~p, ~p ∨ q)
 
     assert(
-      sources.asString
+      sources.show
         ==
         """|
            |╭───╮╭───╮╭───────╮╭───────────╮

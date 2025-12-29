@@ -9,7 +9,7 @@ class SimpleSourceSpec extends AnyFlatSpec with Matchers {
     val p = SimpleSource("p", ps)
 
     assert(
-      p.toString
+      p.show
       ==
       """|
          |╭───╮

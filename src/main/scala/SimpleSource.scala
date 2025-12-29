@@ -3,7 +3,7 @@ case class SimpleSource(
   output: List[Bit]
 ) extends SignalSource :
 
-  override def toString: String =
+  override def show: String =
     List(
       "\n╭───╮",
       "\n│ " + name + " │",

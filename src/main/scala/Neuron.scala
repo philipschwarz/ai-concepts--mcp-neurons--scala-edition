@@ -22,7 +22,7 @@ case class Neuron(
   private def f(z: Int): Bit =
     if z < θ then 0 else 1
 
-  override def toString: String =
+  override def show: String =
     val n = inputs.size
     val width = 4 * n + 5
     val space = width - 2 - name.size
