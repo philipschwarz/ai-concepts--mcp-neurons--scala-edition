@@ -12,10 +12,12 @@ def main(): Unit =
 
   val p = SimpleSignalSource("p", ps)
   val q = SimpleSignalSource("q", qs)
-
-  List(
-    List(p, q, p ∧ q),
-    List(p, q, p ∨ q),
-    List(p, q, ~p, ~p ∨ q),
-    List(p, q, p ∧ q, ~(p ∧ q), ~p, ~ q, ~p ∨ ~q)
-  ).map(_.show).foreach(print)
+  val signalSources =
+    List(
+      List(p, q, p ∧ q),
+      List(p, q, p ∨ q),
+      List(p, q, ~p, ~p ∨ q),
+      List(p, q, p ∧ q, ~(p ∧ q), ~p, ~ q, ~p ∨ ~q)
+    )
+    
+  signalSources.map(_.show).foreach(print)
