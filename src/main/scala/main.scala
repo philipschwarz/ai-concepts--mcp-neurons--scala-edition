@@ -10,8 +10,8 @@ def main(): Unit =
       ( 1,  1 )
   ).unzip
 
-  val p = SimpleSource("p", ps)
-  val q = SimpleSource("q", qs)
+  val p = SimpleSignalSource("p", ps)
+  val q = SimpleSignalSource("q", qs)
 
   List(
     List(p, q, p ∧ q),

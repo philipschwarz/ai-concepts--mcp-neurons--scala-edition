@@ -1,4 +1,8 @@
 import io.github.iltotore.iron.*
+import io.github.iltotore.iron.constraint.numeric.Positive0
+
+type Count = Int :| Positive0
+type Threshold = Int :| Positive0
 
 case class Neuron(
   name: String,
