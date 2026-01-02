@@ -2,4 +2,4 @@ Scala code for slide deck [AI Concepts - MCP Neurons](https://fpilluminated.org/
 
 ---
 
-![AI Concepts - MCP Neurons](2026-01-02-AI-concepts--MCP-neuron--scala-code-edition-first-slide-large.png) 
+![AI Concepts - MCP Neurons](src/main/resources/images/2026-01-02-AI-concepts--MCP-neuron--scala-code-edition-first-slide-large.png) 
