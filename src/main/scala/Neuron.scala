@@ -11,7 +11,8 @@ case class Neuron(
   inputs: List[List[Bit]]
 ) extends SignalSource:
 
-  val output: List[Bit] = process(inputs)
+  lazy val output: List[Bit] =
+    process(inputs)
 
   private def process(inputs: List[List[Bit]]): List[Bit] =
     inputs.transpose.map { xs =>
