@@ -17,7 +17,8 @@ def main(): Unit =
       List(p, q, p ∧ q),
       List(p, q, p ∨ q),
       List(p, q, ~p, ~p ∨ q),
-      List(p, q, p ∧ q, ~(p ∧ q), ~p, ~ q, ~p ∨ ~q)
+      List(p, q, p ∧ q, ~(p ∧ q), ~p, ~ q, ~p ∨ ~q),
+      List(p, q, p ∨ q, ~(p ∨ q), ~p, ~q,  ~p ∧ ~q)
     )
     
   signalSources.map(_.show).foreach(print)
