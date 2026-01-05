@@ -12,6 +12,7 @@ def main(): Unit =
 
   val p = SimpleSignalSource("p", ps)
   val q = SimpleSignalSource("q", qs)
+
   val signalSources =
     List(
       List(p, q, p ∧ q),
